@@ -1,0 +1,86 @@
+SLIDE 1 — TITLE & HOOK
+- D2C Weekly Growth & Profit - weekly channel, promo and cash analytics
+- 208 weeks of data (2022-10-03 to 2026-09-21), 44 source columns, one row per week
+- Domain: direct-to-consumer e-commerce. Target: Net_Profit (forecast also Net_Revenue).
+- Hook: 25 of 208 weeks lost money. Which channels and promos are behind that?
+
+SLIDE 2 — BUSINESS PROBLEM
+- Marketing spend keeps growing, but it is unclear which channel and which promos actually make money, or whether cash is safe.
+- Commercial friction: ROAS looks good on revenue while discounts and returns can erase profit.
+- Core question: which spend mix and promo choices maximize Net_Profit while keeping Cash_Balance safe over the next 13 weeks?
+- Outcomes: UNDERSTAND (health, regimes, anomalies), DECIDE (mix, promos, simulations), MONITOR (forecast, cash, alerts).
+
+SLIDE 3 — DATASET OVERVIEW
+- Source: C:\Users\91635\OneDrive\VS STUDIO\regular\Portfoliio\content\s1p11\data\raw\d2c_weekly_growth.csv
+- Shape: 208 rows x 44 columns; date range 2022-10-03 to 2026-09-21
+- Promo weeks: 39 (19%); normal weeks: 169
+- Loss weeks (Net_Profit < 0): 25 (12%)
+- ROAS basis detected: Net_Revenue; accounting identities checked in validation_report.json
+
+SLIDE 4 — OVERALL PERFORMANCE
+- Last 52 weeks Net Revenue 8,167,742, Net Profit 981,258 (margin 12.0%)
+- Average week: revenue 122,078, profit 9,800, marketing 17,650
+- ROAS 6.85 (break-even 1.83); CAC 25.9; LTV to CAC 7.8
+- Cash now 1,574,870, runway 26.8 weeks
+
+SLIDE 5 — CORE FINDING
+- **Promo weeks earn 2,098 more median Net Profit than normal weeks** (10,359 vs 8,261).
+- Median discount 11.2% in promo weeks vs 3.0% normally; limit set at 6.0%.
+- Loss-week rate: promo 5% vs normal 14%.
+- Associations only: promos coincide with seasons and higher spend.
+
+SLIDE 6 — DOMAIN DEEP DIVE
+- Average Net Margin 6.6%.
+- Strongest months: Jul 9.7% (+3.1 pts), Oct 8.8% (+2.1 pts), Aug 8.5% (+1.9 pts)
+- Weakest months: Jan 1.8% (-4.9 pts), Feb 3.3% (-3.3 pts), Apr 4.7% (-1.9 pts)
+- Q4 weeks average margin 7.2% vs 6.4% rest of year.
+
+SLIDE 7 — WEEK REGIMES
+- Efficient: 96 weeks, Net Margin 10.0%, Net Profit 14,755, loss-week rate 0%
+- Steady: 34 weeks, Net Margin 8.6%, Net Profit 12,304, loss-week rate 0%
+- Burn: 78 weeks, Net Margin 1.6%, Net Profit 2,611, loss-week rate 32%
+- Regimes are labelled from each cluster's average Net_Margin_pct, best to worst.
+
+SLIDE 8 — BUSINESS LOGIC
+- 9 rule-based recommendations produced (promo, channel, customer, quality).
+- MEDIUM: Black Friday - Repeat this promo; schedule it for the strongest season (July)
+- MEDIUM: Festive Sale - Repeat this promo; schedule it for the strongest season (July)
+- MEDIUM: Mid-Year Sale - Repeat this promo; schedule it for the strongest season (July)
+- HIGH: Spring Launch - Reduce discount depth or drop this promo type
+- Simulation: within the observed discount range, modelled weekly profit peaks near 2% discount (25,521).
+- Simulations are pre-computed lookups with observed-range warnings; they are not guarantees.
+
+SLIDE 9 — ML CLASSIFIER
+- Loss-week early warning: method ml (LogisticRegression), time-series cross-validation.
+- Out-of-fold recall 92% (target 70%), precision 12%, AUC 0.66
+- Top features: Total_Marketing_Spend_lag13, is_q4, weeks_since_last_promo, Total_Marketing_Spend_lag4, Spend_Email
+- Profit driver model holdout R2 0.01, MAE 7,260; channel importance: Search 31%, Social 17%, Email 23%, Display 4%
+
+SLIDE 10 — ML SEGMENTATION
+- Algorithm: KMeans on scaled ROAS, CAC, gross margin, discount rate, marketing % of revenue, conversion rate.
+- k = 3 (silhouette by k: {'2': 0.2879, '3': 0.313, '4': 0.2754, '5': 0.2495}); silhouette 0.313 vs target 0.25
+- Cluster definitions: Efficient (ROAS 7.6, CAC 24, discount 3.2%); Steady (ROAS 6.6, CAC 23, discount 11.1%); Burn (ROAS 6.0, CAC 30, discount 3.2%)
+
+SLIDE 11 — 13-WEEK OUTLOOK & ALERTS
+- Net Revenue: next 13 weeks 2,349,058 vs 2,279,739 last 13 weeks; method moving_avg_4w
+- Net Profit: next 13 weeks 302,308; method GradientBoostingRegressor; accuracy claim True
+- Revenue MAPE shipped 12.04% (target under 15%); model accepted: False
+- Alerts: none triggered.
+
+SLIDE 12 — KEY INSIGHTS
+- [HIGH] Mid-Year Sale is the strongest promo and Spring Launch the weakest. Evidence: Median Net Profit 20,166 (6 weeks) vs 4,290 (7 weeks); weakest runs at 11.2% median discount.
+- [HIGH] Jul is the strongest month and Jan the weakest by net margin. Evidence: Average Net Margin 9.7% in Jul vs 1.8% in Jan; loss-week rate 0% vs 28%.
+- [HIGH] LTV to CAC is improving at 9.7 (last 13 weeks). Evidence: 9.74 vs 8.01 in the prior 13 weeks (+21.6%); 0 weeks below the 3.0 floor of 208.
+
+SLIDE 13 — RECOMMENDATIONS
+- 1. Reduce discount depth or drop this promo type
+- 2. Repeat Mid-Year Sale; reprice or drop Spring Launch.
+- 3. Schedule big promos in or near Jul; hold spend steady in Jan.
+- 4. Acquisition pays back; keep funding it while watching CAC.
+- 5. Test a small budget move toward Search and watch weekly profit before scaling.
+
+SLIDE 14 — TECHNICAL ARCH
+- Pipeline phases: ingest, clean, engineer, EDA, segmentation, classifier/anomaly/driver, predictor, business logic, insights, export.
+- Modules: src/data, src/features, src/models, src/analytics, src/reporting; orchestrated by main.py.
+- Frameworks: pandas, scikit-learn (KMeans, IsolationForest, GradientBoosting), matplotlib, openpyxl, Gradio.
+- Outputs: output/{understand,decide,monitor,meta}, frontend_contract.json, Excel report. Runs in about a minute on a laptop.

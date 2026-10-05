@@ -1,0 +1,209 @@
+Week_ID,Week_Start,Promo_Event,promo_flag,rule_cut_promo,rule_repeat_promo,ltv_cac_below_streak,rule_pause_acquisition,rule_high_returns,saturation_search,saturation_social,saturation_email,saturation_display,recommendation
+W001,2022-10-03,None,0,0,0,0,0,0,0,0,0,0,
+W002,2022-10-10,None,0,0,0,0,0,0,0,0,0,0,
+W003,2022-10-17,Festive Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W004,2022-10-24,Festive Sale,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W005,2022-10-31,Festive Sale,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W006,2022-11-07,None,0,0,0,0,0,0,0,0,0,0,
+W007,2022-11-14,None,0,0,0,0,0,0,0,0,0,0,
+W008,2022-11-21,Black Friday,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W009,2022-11-28,Black Friday,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W010,2022-12-05,None,0,0,0,0,0,0,0,0,0,0,
+W011,2022-12-12,None,0,0,0,0,0,0,0,0,0,0,
+W012,2022-12-19,Year-End Sale,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W013,2022-12-26,None,0,0,0,0,0,0,0,0,0,0,
+W014,2023-01-02,None,0,0,0,0,0,0,0,0,0,0,
+W015,2023-01-09,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W016,2023-01-16,None,0,0,0,0,0,0,0,0,0,0,
+W017,2023-01-23,None,0,0,0,0,0,0,0,0,0,0,
+W018,2023-01-30,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W019,2023-02-06,None,0,0,0,0,0,0,0,0,0,0,
+W020,2023-02-13,Valentine Promo,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W021,2023-02-20,None,0,0,0,0,0,0,0,0,0,0,
+W022,2023-02-27,None,0,0,0,0,0,0,0,0,0,0,
+W023,2023-03-06,None,0,0,0,0,0,0,0,0,0,0,
+W024,2023-03-13,None,0,0,0,0,0,0,0,0,0,0,
+W025,2023-03-20,Spring Launch,1,1,0,0,0,1,0,0,0,0,Reduce discount depth or drop this promo type; Audit product quality or listing accuracy
+W026,2023-03-27,Spring Launch,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W027,2023-04-03,None,0,0,0,0,0,0,0,0,0,0,
+W028,2023-04-10,None,0,0,0,0,0,0,0,0,0,0,
+W029,2023-04-17,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W030,2023-04-24,None,0,0,0,0,0,0,0,0,0,0,
+W031,2023-05-01,None,0,0,0,0,0,0,0,0,0,0,
+W032,2023-05-08,None,0,0,0,0,0,0,0,0,0,0,
+W033,2023-05-15,None,0,0,0,0,0,0,0,0,0,0,
+W034,2023-05-22,None,0,0,0,0,0,0,0,0,0,0,
+W035,2023-05-29,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W036,2023-06-05,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W037,2023-06-12,None,0,0,0,0,0,0,0,0,0,0,
+W038,2023-06-19,None,0,0,0,0,0,0,0,0,0,0,
+W039,2023-06-26,None,0,0,0,0,0,0,0,0,0,0,
+W040,2023-07-03,None,0,0,0,0,0,0,0,0,0,0,
+W041,2023-07-10,Mid-Year Sale,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W042,2023-07-17,Mid-Year Sale,1,1,0,0,0,1,0,0,0,0,Reduce discount depth or drop this promo type; Audit product quality or listing accuracy
+W043,2023-07-24,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W044,2023-07-31,None,0,0,0,0,0,0,0,0,0,0,
+W045,2023-08-07,None,0,0,0,0,0,0,0,0,0,0,
+W046,2023-08-14,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W047,2023-08-21,None,0,0,0,0,0,0,0,0,0,0,
+W048,2023-08-28,None,0,0,0,0,0,0,0,0,0,0,
+W049,2023-09-04,None,0,0,0,0,0,0,0,0,0,0,
+W050,2023-09-11,None,0,0,0,0,0,0,0,0,0,0,
+W051,2023-09-18,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W052,2023-09-25,None,0,0,0,0,0,0,0,0,1,0,Cap Email; saturation
+W053,2023-10-02,None,0,0,0,0,0,0,0,0,0,0,
+W054,2023-10-09,None,0,0,0,0,0,0,0,0,0,0,
+W055,2023-10-16,Festive Sale,1,1,0,0,0,1,0,0,0,0,Reduce discount depth or drop this promo type; Audit product quality or listing accuracy
+W056,2023-10-23,Festive Sale,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W057,2023-10-30,Festive Sale,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W058,2023-11-06,None,0,0,0,0,0,0,0,0,0,0,
+W059,2023-11-13,None,0,0,0,0,0,0,0,0,0,0,
+W060,2023-11-20,Black Friday,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W061,2023-11-27,Black Friday,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W062,2023-12-04,None,0,0,0,0,0,0,0,0,0,0,
+W063,2023-12-11,None,0,0,0,0,0,0,0,0,0,0,
+W064,2023-12-18,Year-End Sale,1,1,0,0,0,1,0,0,0,0,Reduce discount depth or drop this promo type; Audit product quality or listing accuracy
+W065,2023-12-25,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W066,2024-01-01,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W067,2024-01-08,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W068,2024-01-15,None,0,0,0,0,0,0,0,0,0,0,
+W069,2024-01-22,None,0,0,0,0,0,0,0,0,0,0,
+W070,2024-01-29,None,0,0,0,0,0,0,0,0,0,0,
+W071,2024-02-05,None,0,0,0,0,0,0,0,0,0,0,
+W072,2024-02-12,Valentine Promo,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W073,2024-02-19,None,0,0,0,0,0,0,0,0,0,0,
+W074,2024-02-26,None,0,0,0,0,0,0,0,0,0,0,
+W075,2024-03-04,None,0,0,0,0,0,0,0,0,0,0,
+W076,2024-03-11,None,0,0,0,0,0,0,0,0,0,0,
+W077,2024-03-18,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W078,2024-03-25,Spring Launch,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W079,2024-04-01,None,0,0,0,0,0,0,0,0,0,0,
+W080,2024-04-08,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W081,2024-04-15,None,0,0,0,0,0,0,0,0,0,0,
+W082,2024-04-22,None,0,0,0,0,0,0,0,0,0,0,
+W083,2024-04-29,None,0,0,0,0,0,0,0,0,0,0,
+W084,2024-05-06,None,0,0,0,0,0,0,0,0,0,0,
+W085,2024-05-13,None,0,0,0,0,0,0,0,0,0,0,
+W086,2024-05-20,None,0,0,0,0,0,0,0,0,0,0,
+W087,2024-05-27,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W088,2024-06-03,None,0,0,0,0,0,0,0,0,0,0,
+W089,2024-06-10,None,0,0,0,0,0,0,0,0,0,0,
+W090,2024-06-17,None,0,0,0,0,0,0,0,0,0,0,
+W091,2024-06-24,None,0,0,0,0,0,1,1,0,0,0,Audit product quality or listing accuracy; Cap Search; saturation
+W092,2024-07-01,None,0,0,0,0,0,0,0,0,0,0,
+W093,2024-07-08,Mid-Year Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W094,2024-07-15,Mid-Year Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W095,2024-07-22,None,0,0,0,0,0,0,0,0,0,0,
+W096,2024-07-29,None,0,0,0,0,0,0,0,0,0,0,
+W097,2024-08-05,None,0,0,0,0,0,0,0,0,0,0,
+W098,2024-08-12,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W099,2024-08-19,None,0,0,0,0,0,1,1,0,0,0,Audit product quality or listing accuracy; Cap Search; saturation
+W100,2024-08-26,None,0,0,0,0,0,0,0,0,0,0,
+W101,2024-09-02,None,0,0,0,0,0,0,0,0,0,0,
+W102,2024-09-09,None,0,0,0,0,0,0,0,0,0,0,
+W103,2024-09-16,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W104,2024-09-23,None,0,0,0,0,0,0,0,0,0,0,
+W105,2024-09-30,None,0,0,0,0,0,0,0,0,0,0,
+W106,2024-10-07,None,0,0,0,0,0,0,0,0,0,0,
+W107,2024-10-14,None,0,0,0,0,0,0,0,0,0,0,
+W108,2024-10-21,Festive Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W109,2024-10-28,Festive Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W110,2024-11-04,None,0,0,0,0,0,0,0,0,0,0,
+W111,2024-11-11,None,0,0,0,0,0,0,0,0,0,0,
+W112,2024-11-18,None,0,0,0,0,0,0,0,0,0,0,
+W113,2024-11-25,Black Friday,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W114,2024-12-02,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W115,2024-12-09,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W116,2024-12-16,Year-End Sale,1,1,0,0,0,1,0,0,0,0,Reduce discount depth or drop this promo type; Audit product quality or listing accuracy
+W117,2024-12-23,Year-End Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W118,2024-12-30,None,0,0,0,0,0,0,0,0,0,0,
+W119,2025-01-06,None,0,0,0,0,0,0,0,0,0,0,
+W120,2025-01-13,None,0,0,0,0,0,0,0,0,0,0,
+W121,2025-01-20,None,0,0,0,0,0,0,0,0,0,0,
+W122,2025-01-27,None,0,0,0,0,0,0,0,0,0,0,
+W123,2025-02-03,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W124,2025-02-10,Valentine Promo,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W125,2025-02-17,None,0,0,0,0,0,0,0,0,0,0,
+W126,2025-02-24,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W127,2025-03-03,None,0,0,0,0,0,0,0,0,0,0,
+W128,2025-03-10,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W129,2025-03-17,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W130,2025-03-24,Spring Launch,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W131,2025-03-31,Spring Launch,1,1,0,0,0,0,0,0,0,0,Reduce discount depth or drop this promo type
+W132,2025-04-07,None,0,0,0,0,0,0,0,0,0,0,
+W133,2025-04-14,None,0,0,0,0,0,0,0,0,0,0,
+W134,2025-04-21,None,0,0,0,0,0,0,0,0,0,0,
+W135,2025-04-28,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W136,2025-05-05,None,0,0,0,0,0,0,0,0,0,0,
+W137,2025-05-12,None,0,0,0,0,0,0,0,0,0,0,
+W138,2025-05-19,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W139,2025-05-26,None,0,0,0,0,0,0,0,0,0,0,
+W140,2025-06-02,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W141,2025-06-09,None,0,0,0,0,0,0,0,0,0,0,
+W142,2025-06-16,None,0,0,0,0,0,0,0,0,0,0,
+W143,2025-06-23,None,0,0,0,0,0,0,0,0,0,0,
+W144,2025-06-30,None,0,0,0,0,0,0,0,0,0,0,
+W145,2025-07-07,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W146,2025-07-14,Mid-Year Sale,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W147,2025-07-21,None,0,0,0,0,0,0,0,0,0,0,
+W148,2025-07-28,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W149,2025-08-04,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W150,2025-08-11,None,0,0,0,0,0,0,0,0,0,0,
+W151,2025-08-18,None,0,0,0,0,0,0,0,0,0,0,
+W152,2025-08-25,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W153,2025-09-01,None,0,0,0,0,0,0,0,0,0,0,
+W154,2025-09-08,None,0,0,0,0,0,0,0,0,0,0,
+W155,2025-09-15,None,0,0,0,0,0,0,0,0,0,0,
+W156,2025-09-22,None,0,0,0,0,0,0,0,0,0,0,
+W157,2025-09-29,None,0,0,0,0,0,0,0,0,0,0,
+W158,2025-10-06,None,0,0,0,0,0,0,0,0,0,0,
+W159,2025-10-13,None,0,0,0,0,0,0,0,0,0,0,
+W160,2025-10-20,Festive Sale,1,0,1,0,0,1,0,0,0,0,Repeat this promo; schedule it for the strongest season; Audit product quality or listing accuracy
+W161,2025-10-27,Festive Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W162,2025-11-03,None,0,0,0,0,0,0,0,0,0,0,
+W163,2025-11-10,None,0,0,0,0,0,0,0,0,0,0,
+W164,2025-11-17,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W165,2025-11-24,Black Friday,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W166,2025-12-01,None,0,0,0,0,0,0,0,0,0,0,
+W167,2025-12-08,None,0,0,0,0,0,0,0,0,0,0,
+W168,2025-12-15,Year-End Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W169,2025-12-22,Year-End Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W170,2025-12-29,None,0,0,0,0,0,0,0,0,0,0,
+W171,2026-01-05,None,0,0,0,0,0,0,0,0,0,0,
+W172,2026-01-12,None,0,0,0,0,0,0,0,0,0,0,
+W173,2026-01-19,None,0,0,0,0,0,0,0,0,0,0,
+W174,2026-01-26,None,0,0,0,0,0,0,0,0,0,0,
+W175,2026-02-02,None,0,0,0,0,0,0,0,0,0,1,Cap Display; saturation
+W176,2026-02-09,Valentine Promo,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W177,2026-02-16,None,0,0,0,0,0,0,0,0,0,0,
+W178,2026-02-23,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W179,2026-03-02,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W180,2026-03-09,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W181,2026-03-16,None,0,0,0,0,0,0,0,0,0,0,
+W182,2026-03-23,Spring Launch,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W183,2026-03-30,Spring Launch,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W184,2026-04-06,None,0,0,0,0,0,0,0,0,0,0,
+W185,2026-04-13,None,0,0,0,0,0,0,0,0,0,0,
+W186,2026-04-20,None,0,0,0,0,0,0,0,0,0,0,
+W187,2026-04-27,None,0,0,0,0,0,0,0,0,0,0,
+W188,2026-05-04,None,0,0,0,0,0,0,0,0,0,0,
+W189,2026-05-11,None,0,0,0,0,0,0,0,0,0,0,
+W190,2026-05-18,None,0,0,0,0,0,0,0,0,0,0,
+W191,2026-05-25,None,0,0,0,0,0,0,0,0,0,0,
+W192,2026-06-01,None,0,0,0,0,0,0,0,0,0,0,
+W193,2026-06-08,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W194,2026-06-15,None,0,0,0,0,0,0,0,0,0,0,
+W195,2026-06-22,None,0,0,0,0,0,0,0,0,0,0,
+W196,2026-06-29,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W197,2026-07-06,None,0,0,0,0,0,0,0,0,0,0,
+W198,2026-07-13,Mid-Year Sale,1,0,1,0,0,0,0,0,0,0,Repeat this promo; schedule it for the strongest season
+W199,2026-07-20,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W200,2026-07-27,None,0,0,0,0,0,0,0,0,0,0,
+W201,2026-08-03,None,0,0,0,0,0,0,0,0,0,0,
+W202,2026-08-10,None,0,0,0,0,0,0,0,0,0,0,
+W203,2026-08-17,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy
+W204,2026-08-24,None,0,0,0,0,0,0,0,0,0,0,
+W205,2026-08-31,None,0,0,0,0,0,0,0,0,0,0,
+W206,2026-09-07,None,0,0,0,0,0,0,0,0,0,0,
+W207,2026-09-14,None,0,0,0,0,0,0,0,0,0,0,
+W208,2026-09-21,None,0,0,0,0,0,1,0,0,0,0,Audit product quality or listing accuracy

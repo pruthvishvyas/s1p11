@@ -1,0 +1,134 @@
+{
+  "insights": [
+    {
+      "id": "I1",
+      "category": "Promo Profitability",
+      "severity": "HIGH",
+      "finding": "Mid-Year Sale is the strongest promo and Spring Launch the weakest.",
+      "evidence": "Median Net Profit 20,166 (6 weeks) vs 4,290 (7 weeks); weakest runs at 11.2% median discount.",
+      "action": "Repeat Mid-Year Sale; reprice or drop Spring Launch.",
+      "outcome": "DECIDE",
+      "metric_value": 15875.5
+    },
+    {
+      "id": "I2",
+      "category": "Seasonality",
+      "severity": "HIGH",
+      "finding": "Jul is the strongest month and Jan the weakest by net margin.",
+      "evidence": "Average Net Margin 9.7% in Jul vs 1.8% in Jan; loss-week rate 0% vs 28%.",
+      "action": "Schedule big promos in or near Jul; hold spend steady in Jan.",
+      "outcome": "DECIDE",
+      "metric_value": 7.9667
+    },
+    {
+      "id": "I3",
+      "category": "Customer Economics",
+      "severity": "HIGH",
+      "finding": "LTV to CAC is improving at 9.7 (last 13 weeks).",
+      "evidence": "9.74 vs 8.01 in the prior 13 weeks (+21.6%); 0 weeks below the 3.0 floor of 208.",
+      "action": "Acquisition pays back; keep funding it while watching CAC.",
+      "outcome": "DECIDE",
+      "metric_value": 9.7369
+    },
+    {
+      "id": "I4",
+      "category": "Channel Performance",
+      "severity": "MEDIUM",
+      "finding": "Search spend is most associated with Net Profit; Display the least.",
+      "evidence": "Permutation importance share: Search 31%, Display 4%. Driver model holdout R2 0.01: weak (holdout R2 low), so treat as a hint to test.",
+      "action": "Test a small budget move toward Search and watch weekly profit before scaling.",
+      "outcome": "DECIDE",
+      "metric_value": 0.3074
+    },
+    {
+      "id": "I5",
+      "category": "Channel Performance",
+      "severity": "MEDIUM",
+      "finding": "Email returns the most revenue per extra unit of spend recently; Search the least.",
+      "evidence": "Marginal return 22.49 (Email, 9% of spend) vs 0.00 (Search, 41% of spend). Associated with, not proof of, cause.",
+      "action": "Rule check: Shift 10% of budget here (test) for Email; hold current budget for Search.",
+      "outcome": "DECIDE",
+      "metric_value": 22.4936
+    },
+    {
+      "id": "I6",
+      "category": "Seasonality",
+      "severity": "MEDIUM",
+      "finding": "Next 13 weeks Net Revenue is forecast up 3.0% vs the last 13 weeks.",
+      "evidence": "Forecast 2,349,058 vs 2,279,739 actual; method moving_avg_4w; Net Profit forecast 302,308 (method GradientBoostingRegressor). Accuracy claim: revenue False, profit True.",
+      "action": "Plan the quarter on the forecast band, not a single number.",
+      "outcome": "DECIDE",
+      "metric_value": 3.04
+    },
+    {
+      "id": "I7",
+      "category": "Customer Economics",
+      "severity": "MEDIUM",
+      "finding": "47% of recent orders come from new customers; repeat rate is 53.5%.",
+      "evidence": "Repeat customer rate 53.5% vs 53.9% in the prior 13 weeks; new-customer share of orders 46.5%.",
+      "action": "Retention is carrying a good part of orders; protect it.",
+      "outcome": "DECIDE",
+      "metric_value": 53.4923
+    },
+    {
+      "id": "I8",
+      "category": "Channel Performance",
+      "severity": "MEDIUM",
+      "finding": "11 unusual weeks were flagged (5% of history).",
+      "evidence": "W119: marketing % of revenue is 3.1 std dev above normal (21.61 vs typical 14.83); W169: CTR % is 2.7 std dev above normal (2.59 vs typical 2.12)",
+      "action": "Review the flagged weeks for tracking errors, stock-outs or one-off events before using them in plans.",
+      "outcome": "DECIDE",
+      "metric_value": 11.0
+    },
+    {
+      "id": "I9",
+      "category": "Promo Profitability",
+      "severity": "LOW",
+      "finding": "25 weeks lost money (12% of history).",
+      "evidence": "25 loss weeks of 208. Early-warning model (LogisticRegression): recall 92%, precision 12% (out-of-fold).",
+      "action": "Review planned promo weeks flagged at risk before launch; confirm discount depth against the limit.",
+      "outcome": "DECIDE",
+      "metric_value": 25.0
+    },
+    {
+      "id": "I10",
+      "category": "Cash & Collections",
+      "severity": "LOW",
+      "finding": "Cash covers 26.8 weeks of payroll, opex and marketing (above the 8-week floor).",
+      "evidence": "Cash balance 1,574,870; lowest runway in history 4.1 weeks; weeks under the floor: 64.",
+      "action": "Cash is safe; keep the floor as a guardrail for any spend increase.",
+      "outcome": "DECIDE",
+      "metric_value": 26.794
+    },
+    {
+      "id": "I11",
+      "category": "Customer Economics",
+      "severity": "LOW",
+      "finding": "Return rate is 4.6% of gross revenue recently (limit 5.1%).",
+      "evidence": "52 of 208 weeks above the limit; returns cost 112,769 over the last 13 weeks.",
+      "action": "Returns are in the normal range; keep tracking after promos.",
+      "outcome": "DECIDE",
+      "metric_value": 4.5535
+    },
+    {
+      "id": "I12",
+      "category": "Cash & Collections",
+      "severity": "LOW",
+      "finding": "Collections take 2.8 days (history average 2.7, limit 2.9).",
+      "evidence": "AR outstanding 73,705; DSO above the limit in 31 of 208 weeks.",
+      "action": "Collections are within the normal range; keep monitoring.",
+      "outcome": "DECIDE",
+      "metric_value": 2.8
+    },
+    {
+      "id": "I13",
+      "category": "Promo Profitability",
+      "severity": "LOW",
+      "finding": "Promo weeks earn more than normal weeks by 2,098 in median Net Profit.",
+      "evidence": "Median Net Profit 10,359 in 39 promo weeks vs 8,261 in 169 normal weeks; loss-week rate 5% vs 14%.",
+      "action": "Promos are profitable overall; protect depth limits and repeat the best events.",
+      "outcome": "DECIDE",
+      "metric_value": 2098.0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "channel_lag_correlation",
+  "title": "Channel spend vs results",
+  "question": "Which channel's spend moves Net Revenue most?",
+  "outcome": "DECIDE",
+  "x": [
+    "Search (lag 0w)",
+    "Search (lag 1w)",
+    "Search (lag 2w)",
+    "Social (lag 0w)",
+    "Social (lag 1w)",
+    "Social (lag 2w)",
+    "Email (lag 0w)",
+    "Email (lag 1w)",
+    "Email (lag 2w)",
+    "Display (lag 0w)",
+    "Display (lag 1w)",
+    "Display (lag 2w)"
+  ],
+  "series": {
+    "orders": [
+      0.7607,
+      0.6005,
+      0.4895,
+      0.7684,
+      0.634,
+      0.4725,
+      0.7752,
+      0.5333,
+      0.4535,
+      0.7949,
+      0.5905,
+      0.4365
+    ],
+    "net_profit": [
+      0.6564,
+      0.6225,
+      0.544,
+      0.6533,
+      0.6336,
+      0.5219,
+      0.6861,
+      0.556,
+      0.488,
+      0.7047,
+      0.5906,
+      0.4733
+    ]
+  }
+}

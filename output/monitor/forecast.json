@@ -1,0 +1,275 @@
+{
+  "report": {
+    "horizon_weeks": 13,
+    "targets": {
+      "Net_Revenue": {
+        "method": "moving_avg_4w",
+        "model_accepted": false,
+        "best_baseline": "moving_avg_4w",
+        "holdout_weeks": 26,
+        "model_metrics": {
+          "mae": 20205.73,
+          "r2": -0.1827,
+          "wape_pct": 12.48,
+          "mape_pct": 12.07
+        },
+        "seasonal_naive_metrics": {
+          "mae": 25919.12,
+          "r2": -1.0831,
+          "wape_pct": 16.0,
+          "mape_pct": 15.08
+        },
+        "moving_avg_4w_metrics": {
+          "mae": 19947.65,
+          "r2": -0.1501,
+          "wape_pct": 12.32,
+          "mape_pct": 12.04
+        },
+        "shipped_mape_pct": 12.04,
+        "mape_target_pct": 15.0,
+        "mape_target_met": true,
+        "accuracy_claim": false,
+        "band_residual_q10": -23607.75,
+        "band_residual_q90": 33621.75,
+        "note": "Model did not beat moving_avg_4w MAE on holdout; baseline shipped. No accuracy claim for the model.",
+        "next_13w_total": 2349057.75,
+        "last_13w_actual_total": 2279739.0
+      },
+      "Net_Profit": {
+        "method": "GradientBoostingRegressor",
+        "model_accepted": true,
+        "best_baseline": "moving_avg_4w",
+        "holdout_weeks": 26,
+        "model_metrics": {
+          "mae": 7705.85,
+          "r2": -0.1378,
+          "wape_pct": 38.81,
+          "mape_pct": 48.16
+        },
+        "seasonal_naive_metrics": {
+          "mae": 9271.88,
+          "r2": -0.4723,
+          "wape_pct": 46.69,
+          "mape_pct": 48.89
+        },
+        "moving_avg_4w_metrics": {
+          "mae": 8342.46,
+          "r2": -0.2483,
+          "wape_pct": 42.01,
+          "mape_pct": 51.11
+        },
+        "shipped_mape_pct": 48.16,
+        "mape_target_pct": null,
+        "mape_target_met": null,
+        "accuracy_claim": true,
+        "band_residual_q10": -10772.19,
+        "band_residual_q90": 13300.16,
+        "note": "Model beat the best baseline MAE on the holdout.",
+        "next_13w_total": 302308.29,
+        "last_13w_actual_total": 328295.0
+      }
+    },
+    "band": "80% prediction band from holdout residual quantiles",
+    "assumptions": [
+      "Marketing spend per channel held at the last 13-week average.",
+      "Promo calendar and discount depth repeat the same week of last year.",
+      "Forecast is a planning view, not a guarantee."
+    ],
+    "direction": {
+      "net_revenue_change_pct_vs_last_13w": 3.04,
+      "label": "up"
+    },
+    "next_week_loss_risk": {
+      "week_start": "2026-09-28",
+      "probability": 0.0008,
+      "threshold": 0.05,
+      "at_risk": false,
+      "method": "ml",
+      "assumed_promo": 0
+    }
+  },
+  "forecast": [
+    {
+      "Week_Start": "2026-09-28",
+      "horizon_week": 1,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 3.4919,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 19665.1168,
+      "Net_Profit_lo80": 8892.9223,
+      "Net_Profit_hi80": 32965.2815,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-10-05",
+      "horizon_week": 2,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 4.5622,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 27300.43,
+      "Net_Profit_lo80": 16528.2355,
+      "Net_Profit_hi80": 40600.5947,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-10-12",
+      "horizon_week": 3,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 2.7744,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 21599.8626,
+      "Net_Profit_lo80": 10827.6681,
+      "Net_Profit_hi80": 34900.0273,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-10-19",
+      "horizon_week": 4,
+      "assumed_promo_flag": 1,
+      "assumed_discount_rate_pct": 10.297,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 24282.7,
+      "Net_Profit_lo80": 13510.5054,
+      "Net_Profit_hi80": 37582.8646,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-10-26",
+      "horizon_week": 5,
+      "assumed_promo_flag": 1,
+      "assumed_discount_rate_pct": 11.3219,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 22740.9709,
+      "Net_Profit_lo80": 11968.7763,
+      "Net_Profit_hi80": 36041.1355,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-11-02",
+      "horizon_week": 6,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 3.4917,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 23238.5467,
+      "Net_Profit_lo80": 12466.3522,
+      "Net_Profit_hi80": 36538.7114,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-11-09",
+      "horizon_week": 7,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 2.6792,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 23284.7674,
+      "Net_Profit_lo80": 12512.5729,
+      "Net_Profit_hi80": 36584.9321,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-11-16",
+      "horizon_week": 8,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 2.7582,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 21432.1033,
+      "Net_Profit_lo80": 10659.9088,
+      "Net_Profit_hi80": 34732.268,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-11-23",
+      "horizon_week": 9,
+      "assumed_promo_flag": 1,
+      "assumed_discount_rate_pct": 9.7902,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 26831.0876,
+      "Net_Profit_lo80": 16058.893,
+      "Net_Profit_hi80": 40131.2522,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-11-30",
+      "horizon_week": 10,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 2.5034,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 21215.7802,
+      "Net_Profit_lo80": 10443.5856,
+      "Net_Profit_hi80": 34515.9448,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-12-07",
+      "horizon_week": 11,
+      "assumed_promo_flag": 0,
+      "assumed_discount_rate_pct": 2.754,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 24566.2324,
+      "Net_Profit_lo80": 13794.0379,
+      "Net_Profit_hi80": 37866.3971,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-12-14",
+      "horizon_week": 12,
+      "assumed_promo_flag": 1,
+      "assumed_discount_rate_pct": 9.2854,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 22044.5268,
+      "Net_Profit_lo80": 11272.3323,
+      "Net_Profit_hi80": 35344.6915,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    },
+    {
+      "Week_Start": "2026-12-21",
+      "horizon_week": 13,
+      "assumed_promo_flag": 1,
+      "assumed_discount_rate_pct": 10.493,
+      "Net_Revenue_forecast": 180696.75,
+      "Net_Revenue_lo80": 157089.0,
+      "Net_Revenue_hi80": 214318.5,
+      "Net_Revenue_method": "moving_avg_4w",
+      "Net_Profit_forecast": 24106.1652,
+      "Net_Profit_lo80": 13333.9706,
+      "Net_Profit_hi80": 37406.3298,
+      "Net_Profit_method": "GradientBoostingRegressor"
+    }
+  ]
+}

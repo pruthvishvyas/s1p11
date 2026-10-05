@@ -1,0 +1,29 @@
+{
+  "net_profit_target": {
+    "value": null,
+    "unit": "weekly",
+    "client_sets": true
+  },
+  "net_revenue_target": {
+    "value": null,
+    "unit": "weekly",
+    "client_sets": true
+  },
+  "alert_revenue_drop_pct": {
+    "value": 20,
+    "unit": "percent",
+    "description": "Alert if 4-week Net_Revenue falls this % below prior 4 weeks"
+  },
+  "cash_floor_weeks": {
+    "value": 8,
+    "unit": "weeks"
+  },
+  "ltv_cac_min": {
+    "value": 3.0,
+    "unit": "ratio"
+  },
+  "forecast_horizon": {
+    "value": 13,
+    "unit": "weeks"
+  }
+}

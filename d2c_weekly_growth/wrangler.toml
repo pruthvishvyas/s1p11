@@ -1,0 +1,6 @@
+name = "d2c_weekly_growth"
+main = "worker/forecaster.js"
+compatibility_date = "2026-10-05"
+
+[site]
+bucket = "./dist"

@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "Weekly Growth & Profit",
+    "domain": "d2c_ecommerce",
+    "client_id": "d2c_weekly_growth",
+    "description": "Weekly channel, promo and cash analytics"
+  },
+  "terminology": {
+    "revenue": "Net Revenue",
+    "customer": "Customer",
+    "product": "Order",
+    "transaction": "Order"
+  },
+  "outcomes": {
+    "understand": {
+      "kpis": "output/understand/kpis.json",
+      "charts": "output/understand/charts/",
+      "segments": "output/understand/segments.json",
+      "anomalies": "output/understand/anomalies.json"
+    },
+    "decide": {
+      "insights": "output/decide/insights.json",
+      "recommendations": "output/decide/recommendations.json",
+      "simulations": "output/decide/simulations/",
+      "goals": "output/decide/goals.json"
+    },
+    "monitor": {
+      "forecast": "output/monitor/forecast.json",
+      "goal_progress": "output/monitor/goal_progress.json",
+      "alerts": "output/monitor/alerts.json"
+    }
+  },
+  "model": {
+    "type": "GradientBoostingRegressor (or seasonal-naive if baseline wins)",
+    "pkl_file": "models/forecast_model.pkl",
+    "input_fields": [
+      "Total_Marketing_Spend",
+      "Spend_Search",
+      "Spend_Social",
+      "Spend_Email",
+      "Spend_Display",
+      "promo_flag",
+      "discount_rate_pct",
+      "week_of_year"
+    ],
+    "output_label": "Net_Revenue",
+    "horizon": "13 weeks"
+  },
+  "source": {
+    "type": "csv",
+    "file": "data/processed/d2c_weekly_growth_feature_store.csv"
+  },
+  "frontend": {
+    "framework": "vanilla HTML/JS",
+    "deploy_target": "cloudflare_pages"
+  },
+  "saas_ready": true
+}

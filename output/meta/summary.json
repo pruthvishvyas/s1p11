@@ -1,0 +1,231 @@
+{
+  "dataset": "D2C Weekly Growth & Profit",
+  "client_id": "d2c_weekly_growth",
+  "pipeline_version": "v3.0",
+  "generated_at": "2026-10-05T11:33:17",
+  "rows": 208,
+  "date_range": [
+    "2022-10-03",
+    "2026-09-21"
+  ],
+  "synthetic_data": false,
+  "roas_basis": "Net_Revenue",
+  "promo_weeks": 39,
+  "loss_weeks": 25,
+  "anomaly_weeks": 11,
+  "thresholds": {
+    "LTV_CAC_MIN": 3.0,
+    "ROAS_BREAKEVEN": 1.8292,
+    "DSO_MAX_DAYS": 2.9,
+    "CASH_FLOOR_WEEKS": 8.0,
+    "DISCOUNT_RATE_MAX_PCT": 5.9546,
+    "RETURN_RATE_MAX_PCT": 5.0705
+  },
+  "source_type": "csv",
+  "models": {
+    "segmentation": {
+      "k": 3,
+      "silhouette_by_k": {
+        "2": 0.2879,
+        "3": 0.313,
+        "4": 0.2754,
+        "5": 0.2495
+      },
+      "silhouette": 0.313,
+      "silhouette_target": 0.25,
+      "target_met": true,
+      "k_kept_at_config": true,
+      "profit_separation_monotonic": true,
+      "features": [
+        "ROAS",
+        "CAC",
+        "Gross_Margin_pct",
+        "discount_rate_pct",
+        "marketing_pct_of_revenue",
+        "conversion_rate_pct"
+      ],
+      "label_map": {
+        "1": "Efficient",
+        "0": "Steady",
+        "2": "Burn"
+      }
+    },
+    "loss_week_classifier": {
+      "n_loss_weeks": 25,
+      "n_weeks": 208,
+      "rule_recall": 0.08,
+      "features_used": [
+        "Spend_Search",
+        "Spend_Social",
+        "Spend_Email",
+        "Spend_Display",
+        "search_share",
+        "social_share",
+        "email_share",
+        "display_share",
+        "Total_Marketing_Spend",
+        "promo_flag",
+        "discount_rate_pct",
+        "week_of_year",
+        "is_q4",
+        "weeks_since_last_promo",
+        "Net_Revenue_lag1",
+        "Net_Revenue_lag4",
+        "Net_Revenue_lag13",
+        "Net_Profit_lag1",
+        "Net_Profit_lag4",
+        "Net_Profit_lag13",
+        "Total_Marketing_Spend_lag1",
+        "Total_Marketing_Spend_lag4",
+        "Total_Marketing_Spend_lag13",
+        "Net_Revenue_rm4",
+        "Net_Profit_rm4",
+        "Total_Marketing_Spend_rm4"
+      ],
+      "excluded_for_leakage": [
+        "Net_Profit",
+        "EBITDA",
+        "Net_Margin_pct",
+        "Tax",
+        "Gross_Profit"
+      ],
+      "method": "ml",
+      "skipped": false,
+      "candidates": {
+        "LogisticRegression": {
+          "threshold": 0.05,
+          "recall": 0.9231,
+          "precision": 0.125,
+          "roc_auc": 0.6624,
+          "oof_weeks": 170
+        },
+        "GradientBoosting": {
+          "threshold": 0.05,
+          "recall": 0.6154,
+          "precision": 0.1311,
+          "roc_auc": 0.6306,
+          "oof_weeks": 170
+        }
+      },
+      "chosen": "LogisticRegression",
+      "recall": 0.9231,
+      "precision": 0.125,
+      "roc_auc": 0.6624,
+      "threshold": 0.05,
+      "recall_target": 0.7,
+      "target_met": true,
+      "top_features": {
+        "Total_Marketing_Spend_lag13": 0.1586,
+        "is_q4": 0.0849,
+        "weeks_since_last_promo": 0.0814,
+        "Total_Marketing_Spend_lag4": 0.0709,
+        "Spend_Email": 0.0484,
+        "Spend_Social": 0.047,
+        "Net_Profit_lag1": 0.0458,
+        "Total_Marketing_Spend": 0.0457,
+        "week_of_year": 0.0419,
+        "Spend_Display": 0.0405
+      },
+      "note": "Metrics are out-of-fold over time-ordered splits; loss_risk_prob on training weeks is in-sample."
+    },
+    "driver_model": {
+      "holdout_weeks": 26,
+      "holdout_r2": 0.0074,
+      "holdout_mae": 7259.91,
+      "reliable": false,
+      "channel_importance": {
+        "Search": 0.3074,
+        "Social": 0.1744,
+        "Email": 0.2269,
+        "Display": 0.0373
+      },
+      "group_importance": {
+        "promo": 0.0,
+        "seasonality": 0.254,
+        "total_spend": 0.0
+      },
+      "note": "Permutation importance on the last holdout weeks. Associations, not proven causes."
+    },
+    "forecast": {
+      "Net_Revenue": {
+        "method": "moving_avg_4w",
+        "model_accepted": false,
+        "best_baseline": "moving_avg_4w",
+        "model_metrics": {
+          "mae": 20205.73,
+          "r2": -0.1827,
+          "wape_pct": 12.48,
+          "mape_pct": 12.07
+        },
+        "seasonal_naive_metrics": {
+          "mae": 25919.12,
+          "r2": -1.0831,
+          "wape_pct": 16.0,
+          "mape_pct": 15.08
+        },
+        "moving_avg_4w_metrics": {
+          "mae": 19947.65,
+          "r2": -0.1501,
+          "wape_pct": 12.32,
+          "mape_pct": 12.04
+        },
+        "shipped_mape_pct": 12.04,
+        "mape_target_met": true,
+        "accuracy_claim": false,
+        "note": "Model did not beat moving_avg_4w MAE on holdout; baseline shipped. No accuracy claim for the model.",
+        "next_13w_total": 2349057.75,
+        "last_13w_actual_total": 2279739.0
+      },
+      "Net_Profit": {
+        "method": "GradientBoostingRegressor",
+        "model_accepted": true,
+        "best_baseline": "moving_avg_4w",
+        "model_metrics": {
+          "mae": 7705.85,
+          "r2": -0.1378,
+          "wape_pct": 38.81,
+          "mape_pct": 48.16
+        },
+        "seasonal_naive_metrics": {
+          "mae": 9271.88,
+          "r2": -0.4723,
+          "wape_pct": 46.69,
+          "mape_pct": 48.89
+        },
+        "moving_avg_4w_metrics": {
+          "mae": 8342.46,
+          "r2": -0.2483,
+          "wape_pct": 42.01,
+          "mape_pct": 51.11
+        },
+        "shipped_mape_pct": 48.16,
+        "mape_target_met": null,
+        "accuracy_claim": true,
+        "note": "Model beat the best baseline MAE on the holdout.",
+        "next_13w_total": 302308.29,
+        "last_13w_actual_total": 328295.0
+      }
+    },
+    "forecast_direction": {
+      "net_revenue_change_pct_vs_last_13w": 3.04,
+      "label": "up"
+    },
+    "next_week_loss_risk": {
+      "week_start": "2026-09-28",
+      "probability": 0.0008,
+      "threshold": 0.05,
+      "at_risk": false,
+      "method": "ml",
+      "assumed_promo": 0
+    },
+    "forecast_assumptions": [
+      "Marketing spend per channel held at the last 13-week average.",
+      "Promo calendar and discount depth repeat the same week of last year.",
+      "Forecast is a planning view, not a guarantee."
+    ]
+  },
+  "files": {
+    "excel": "reports/d2c_weekly_growth_report.xlsx",
+    "feature_store": "data/processed/d2c_weekly_growth_feature_store.csv"
+  }
+}

@@ -1,0 +1,971 @@
+{
+  "meta": {
+    "method": "Log-log elasticities of Net_Revenue to channel spend (negative values clipped to 0); profit = revenue change x gross margin share, budget-neutral.",
+    "elasticities": {
+      "Search": 0.1427,
+      "Social": 0.1512,
+      "Email": 0.2439,
+      "Display": 0.3085
+    },
+    "elasticity_model_r2": 0.7645,
+    "baseline_weekly": {
+      "net_revenue": 175364.5385,
+      "net_profit": 25253.4615,
+      "total_spend": 21383.7692,
+      "spend": {
+        "Search": 8834.7692,
+        "Social": 7145.0769,
+        "Email": 1877.0769,
+        "Display": 3526.8462
+      },
+      "gross_margin_share": 0.5483
+    },
+    "caveat": "Associations from 4 years of weekly data; spend moves with season and promos. Treat as a test hypothesis.",
+    "observed_range": {
+      "channel_share_of_spend": {
+        "Search": [
+          0.3677,
+          0.4612
+        ],
+        "Social": [
+          0.2875,
+          0.3816
+        ],
+        "Email": [
+          0.0688,
+          0.1036
+        ],
+        "Display": [
+          0.1364,
+          0.1955
+        ]
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Social",
+      "to": "Search",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 13111.52,
+        "Social": 2868.32,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 161614.7,
+      "delta_net_revenue": -13749.8385,
+      "delta_net_profit": -7539.3699,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -7447.8784
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Social",
+      "to": "Search",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 12042.33,
+        "Social": 3937.51,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 167499.1082,
+      "delta_net_revenue": -7865.4303,
+      "delta_net_profit": -4312.8062,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -7447.8784
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Social",
+      "to": "Search",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 10973.15,
+        "Social": 5006.7,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 171405.1859,
+      "delta_net_revenue": -3959.3526,
+      "delta_net_profit": -2171.009,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -7003.6277
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Social",
+      "to": "Search",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 9903.96,
+        "Social": 6075.89,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 173931.803,
+      "delta_net_revenue": -1432.7354,
+      "delta_net_profit": -785.6036,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -6117.369
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Search",
+      "to": "Social",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 7765.58,
+        "Social": 8214.27,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 175833.9985,
+      "delta_net_revenue": 469.46,
+      "delta_net_profit": 257.4163,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 4879.3202
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Search",
+      "to": "Social",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 6696.39,
+        "Social": 9283.45,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 175370.0818,
+      "delta_net_revenue": 5.5434,
+      "delta_net_profit": 3.0396,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 5046.2629
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Search",
+      "to": "Social",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 5627.2,
+        "Social": 10352.64,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 173912.3955,
+      "delta_net_revenue": -1452.1429,
+      "delta_net_profit": -796.2452,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 4404.9656
+    },
+    {
+      "pair": [
+        "Search",
+        "Social"
+      ],
+      "from": "Search",
+      "to": "Social",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 4558.02,
+        "Social": 11421.83,
+        "Email": 1877.08,
+        "Display": 3526.85
+      },
+      "net_revenue": 171286.1211,
+      "delta_net_revenue": -4078.4174,
+      "delta_net_profit": -2236.2952,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 4573.3359
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Search",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Search",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Search",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Search",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 9903.96,
+        "Social": 7145.08,
+        "Email": 807.89,
+        "Display": 3526.85
+      },
+      "net_revenue": 145112.9175,
+      "delta_net_revenue": -30251.6209,
+      "delta_net_profit": -16587.6973,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -3570.3563
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Search",
+      "to": "Email",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 7765.58,
+        "Social": 7145.08,
+        "Email": 2946.27,
+        "Display": 3526.85
+      },
+      "net_revenue": 192180.1141,
+      "delta_net_revenue": 16815.5757,
+      "delta_net_profit": 9220.3879,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 19358.2767
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Search",
+      "to": "Email",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 6696.39,
+        "Social": 7145.08,
+        "Email": 4015.45,
+        "Display": 3526.85
+      },
+      "net_revenue": 202921.5216,
+      "delta_net_revenue": 27556.9831,
+      "delta_net_profit": 15110.1621,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 18949.2123
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Search",
+      "to": "Email",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 5627.2,
+        "Social": 7145.08,
+        "Email": 5084.64,
+        "Display": 3526.85
+      },
+      "net_revenue": 209679.521,
+      "delta_net_revenue": 34314.9825,
+      "delta_net_profit": 18815.737,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 17912.2018
+    },
+    {
+      "pair": [
+        "Search",
+        "Email"
+      ],
+      "from": "Search",
+      "to": "Email",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 4558.02,
+        "Social": 7145.08,
+        "Email": 6153.83,
+        "Display": 3526.85
+      },
+      "net_revenue": 213163.7666,
+      "delta_net_revenue": 37799.2281,
+      "delta_net_profit": 20726.2334,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 18080.5721
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Search",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Search",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 12042.33,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 319.28
+      },
+      "net_revenue": 87357.0396,
+      "delta_net_revenue": -88007.4988,
+      "delta_net_profit": -48256.6457,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -8532.667
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Search",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 10973.15,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 1388.47
+      },
+      "net_revenue": 135667.8627,
+      "delta_net_revenue": -39696.6757,
+      "delta_net_profit": -21766.6499,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -8532.667
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Search",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 9903.96,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 2457.66
+      },
+      "net_revenue": 159451.4616,
+      "delta_net_revenue": -15913.0769,
+      "delta_net_profit": -8725.5259,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -8895.7315
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Search",
+      "to": "Display",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 7765.58,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 4596.03
+      },
+      "net_revenue": 186820.0988,
+      "delta_net_revenue": 11455.5603,
+      "delta_net_profit": 6281.3615,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 14836.1875
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Search",
+      "to": "Display",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 6696.39,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 5665.22
+      },
+      "net_revenue": 195103.2405,
+      "delta_net_revenue": 19738.702,
+      "delta_net_profit": 10823.209,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 15201.2724
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Search",
+      "to": "Display",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 5627.2,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 6734.41
+      },
+      "net_revenue": 200745.2196,
+      "delta_net_revenue": 25380.6811,
+      "delta_net_profit": 13916.8429,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 13796.7741
+    },
+    {
+      "pair": [
+        "Search",
+        "Display"
+      ],
+      "from": "Search",
+      "to": "Display",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 4558.02,
+        "Social": 7145.08,
+        "Email": 1877.08,
+        "Display": 7803.6
+      },
+      "net_revenue": 203857.2473,
+      "delta_net_revenue": 28492.7088,
+      "delta_net_profit": 15623.2432,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 13965.1444
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Social",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Social",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Social",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Email",
+      "to": "Social",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 8214.27,
+        "Email": 807.89,
+        "Display": 3526.85
+      },
+      "net_revenue": 145808.1272,
+      "delta_net_revenue": -29556.4113,
+      "delta_net_profit": -16206.497,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -2377.1812
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Social",
+      "to": "Email",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 6075.89,
+        "Email": 2946.27,
+        "Display": 3526.85
+      },
+      "net_revenue": 191011.8241,
+      "delta_net_revenue": 15647.2856,
+      "delta_net_profit": 8579.7861,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 13447.4885
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Social",
+      "to": "Email",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 5006.7,
+        "Email": 4015.45,
+        "Display": 3526.85
+      },
+      "net_revenue": 200056.416,
+      "delta_net_revenue": 24691.8775,
+      "delta_net_profit": 13539.1552,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 12762.5581
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Social",
+      "to": "Email",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 3937.51,
+        "Email": 5084.64,
+        "Display": 3526.85
+      },
+      "net_revenue": 204356.5786,
+      "delta_net_revenue": 28992.0401,
+      "delta_net_profit": 15897.0386,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 12161.2543
+    },
+    {
+      "pair": [
+        "Social",
+        "Email"
+      ],
+      "from": "Social",
+      "to": "Email",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 2868.32,
+        "Email": 6153.83,
+        "Display": 3526.85
+      },
+      "net_revenue": 204081.6017,
+      "delta_net_revenue": 28717.0632,
+      "delta_net_profit": 15746.2621,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 12161.2543
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Social",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Social",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 10352.64,
+        "Email": 1877.08,
+        "Display": 319.28
+      },
+      "net_revenue": 88399.2446,
+      "delta_net_revenue": -86965.2939,
+      "delta_net_profit": -47685.1795,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -4602.8279
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Social",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 9283.45,
+        "Email": 1877.08,
+        "Display": 1388.47
+      },
+      "net_revenue": 136846.2511,
+      "delta_net_revenue": -38518.2873,
+      "delta_net_profit": -21120.511,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -4602.8279
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Social",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 8214.27,
+        "Email": 1877.08,
+        "Display": 2457.66
+      },
+      "net_revenue": 160215.3646,
+      "delta_net_revenue": -15149.1738,
+      "delta_net_profit": -8306.6594,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": -4965.8924
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Social",
+      "to": "Display",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 6075.89,
+        "Email": 1877.08,
+        "Display": 4596.03
+      },
+      "net_revenue": 185684.393,
+      "delta_net_revenue": 10319.8546,
+      "delta_net_profit": 5658.6265,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 5504.596
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Social",
+      "to": "Display",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 5006.7,
+        "Email": 1877.08,
+        "Display": 5665.22
+      },
+      "net_revenue": 192348.5233,
+      "delta_net_revenue": 16983.9849,
+      "delta_net_profit": 9312.7308,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 4572.9736
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Social",
+      "to": "Display",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 3937.51,
+        "Email": 1877.08,
+        "Display": 6734.41
+      },
+      "net_revenue": 195649.0841,
+      "delta_net_revenue": 20284.5457,
+      "delta_net_profit": 11122.5083,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 3925.3026
+    },
+    {
+      "pair": [
+        "Social",
+        "Display"
+      ],
+      "from": "Social",
+      "to": "Display",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 2868.32,
+        "Email": 1877.08,
+        "Display": 7803.6
+      },
+      "net_revenue": 195171.6008,
+      "delta_net_revenue": 19807.0623,
+      "delta_net_profit": 10860.6926,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 3925.3026
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Email",
+      "shift_pct_of_budget": 20,
+      "signed_step": -20,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Email",
+      "shift_pct_of_budget": 15,
+      "signed_step": -15,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 7145.08,
+        "Email": 5084.64,
+        "Display": 319.28
+      },
+      "net_revenue": 106579.5868,
+      "delta_net_revenue": -68784.9516,
+      "delta_net_profit": -37716.457,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 8859.321
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Email",
+      "shift_pct_of_budget": 10,
+      "signed_step": -10,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 7145.08,
+        "Email": 4015.45,
+        "Display": 1388.47
+      },
+      "net_revenue": 158345.4213,
+      "delta_net_revenue": -17019.1171,
+      "delta_net_profit": -9331.9946,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 8859.321
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Display",
+      "to": "Email",
+      "shift_pct_of_budget": 5,
+      "signed_step": -5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 7145.08,
+        "Email": 2946.27,
+        "Display": 2457.66
+      },
+      "net_revenue": 175109.5199,
+      "delta_net_revenue": -255.0186,
+      "delta_net_profit": -139.8329,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 8205.5551
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Email",
+      "to": "Display",
+      "shift_pct_of_budget": 5,
+      "signed_step": 5,
+      "feasible": true,
+      "new_spend": {
+        "Search": 8834.77,
+        "Social": 7145.08,
+        "Email": 807.89,
+        "Display": 4596.03
+      },
+      "net_revenue": 154918.2124,
+      "delta_net_revenue": -20446.326,
+      "delta_net_profit": -11211.2164,
+      "extrapolation": true,
+      "driver_model_delta_net_profit": 4017.0104
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Email",
+      "to": "Display",
+      "shift_pct_of_budget": 10,
+      "signed_step": 10,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Email",
+      "to": "Display",
+      "shift_pct_of_budget": 15,
+      "signed_step": 15,
+      "feasible": false
+    },
+    {
+      "pair": [
+        "Email",
+        "Display"
+      ],
+      "from": "Email",
+      "to": "Display",
+      "shift_pct_of_budget": 20,
+      "signed_step": 20,
+      "feasible": false
+    }
+  ]
+}

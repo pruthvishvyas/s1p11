@@ -1,0 +1,73 @@
+{
+  "rows": 208,
+  "cols": 44,
+  "synthetic_data": false,
+  "schema_ok": true,
+  "missing_cols": [],
+  "extra_cols": [],
+  "null_map": {
+    "Promo_Event": 169
+  },
+  "bad_dates": 0,
+  "duplicate_week_ids": [],
+  "week_gaps": {
+    "non_7_day_gaps": 0,
+    "examples": []
+  },
+  "missing_weeks": [],
+  "date_range": [
+    "2022-10-03",
+    "2026-09-21"
+  ],
+  "promo_counts": {
+    "None": 169,
+    "Festive Sale": 10,
+    "Spring Launch": 7,
+    "Black Friday": 6,
+    "Year-End Sale": 6,
+    "Mid-Year Sale": 6,
+    "Valentine Promo": 4
+  },
+  "identity_gaps": {
+    "sum_spend_equals_total": {
+      "max_abs_gap": 0.0,
+      "mean_abs_gap": 0.0,
+      "tolerance": 1.0,
+      "ok": true
+    },
+    "net_revenue_identity": {
+      "max_abs_gap": 0.0,
+      "mean_abs_gap": 0.0,
+      "tolerance": 1.0,
+      "ok": true
+    },
+    "gross_profit_identity": {
+      "max_abs_gap": 0.0,
+      "mean_abs_gap": 0.0,
+      "tolerance": 1.0,
+      "ok": true
+    },
+    "gross_margin_pct": {
+      "basis": "Net_Revenue",
+      "max_abs_gap": 0.0498,
+      "mean_abs_gap": 0.0251,
+      "tolerance": 0.15,
+      "ok": true
+    },
+    "net_margin_pct": {
+      "basis": "Net_Revenue",
+      "max_abs_gap": 0.05,
+      "mean_abs_gap": 0.0248,
+      "tolerance": 0.15,
+      "ok": true
+    },
+    "roas": {
+      "basis": "Net_Revenue",
+      "max_abs_gap": 0.005,
+      "mean_abs_gap": 0.0024,
+      "tolerance": 0.02,
+      "ok": true
+    }
+  },
+  "roas_basis": "Net_Revenue"
+}

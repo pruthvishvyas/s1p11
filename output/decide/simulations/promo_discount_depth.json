@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "method": "Orders respond to discount depth with the observed log-linear response (controls: total spend, Q4, trend). COGS scales with orders, not with discounts.",
+    "orders_per_discount_point_pct": 1.75,
+    "clipped_to_zero": false,
+    "model_r2": 0.7087,
+    "baseline_discount_rate_pct": 3.8408,
+    "baseline_weekly": {
+      "orders": 1979.8462,
+      "net_revenue": 175364.5385,
+      "net_profit": 25253.4615
+    },
+    "caveat": "Points outside observed_range are extrapolation.",
+    "observed_range": {
+      "discount_rate_pct": [
+        1.3419,
+        13.1389
+      ],
+      "promo_weeks_discount_rate_pct": [
+        8.4811,
+        13.1389
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "discount_rate_pct": 0.0,
+      "orders": 1851.1671,
+      "net_revenue": 170832.7338,
+      "net_profit": 25709.7156,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 1.0,
+      "orders": 1883.8426,
+      "net_revenue": 172029.0923,
+      "net_profit": 25628.0566,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 2.0,
+      "orders": 1917.0948,
+      "net_revenue": 173214.354,
+      "net_profit": 25520.7958,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 3.0,
+      "orders": 1950.934,
+      "net_revenue": 174387.7546,
+      "net_profit": 25387.0549,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 4.0,
+      "orders": 1985.3705,
+      "net_revenue": 175548.506,
+      "net_profit": 25225.9323,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 5.0,
+      "orders": 2020.4149,
+      "net_revenue": 176695.7961,
+      "net_profit": 25036.5032,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 6.0,
+      "orders": 2056.0778,
+      "net_revenue": 177828.788,
+      "net_profit": 24817.8185,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 7.0,
+      "orders": 2092.3702,
+      "net_revenue": 178946.6194,
+      "net_profit": 24568.9043,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 8.0,
+      "orders": 2129.3033,
+      "net_revenue": 180048.4022,
+      "net_profit": 24288.7617,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 9.0,
+      "orders": 2166.8882,
+      "net_revenue": 181133.2216,
+      "net_profit": 23976.3657,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 10.0,
+      "orders": 2205.1366,
+      "net_revenue": 182200.1353,
+      "net_profit": 23630.665,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 11.0,
+      "orders": 2244.0601,
+      "net_revenue": 183248.1733,
+      "net_profit": 23250.5812,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 12.0,
+      "orders": 2283.6707,
+      "net_revenue": 184276.3368,
+      "net_profit": 22835.0081,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 13.0,
+      "orders": 2323.9804,
+      "net_revenue": 185283.5977,
+      "net_profit": 22382.8115,
+      "extrapolation": false
+    },
+    {
+      "discount_rate_pct": 14.0,
+      "orders": 2365.0017,
+      "net_revenue": 186268.8976,
+      "net_profit": 21892.8277,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 15.0,
+      "orders": 2406.747,
+      "net_revenue": 187231.1476,
+      "net_profit": 21363.8637,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 16.0,
+      "orders": 2449.2292,
+      "net_revenue": 188169.2268,
+      "net_profit": 20794.6962,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 17.0,
+      "orders": 2492.4613,
+      "net_revenue": 189081.9821,
+      "net_profit": 20184.0705,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 18.0,
+      "orders": 2536.4564,
+      "net_revenue": 189968.2274,
+      "net_profit": 19530.7005,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 19.0,
+      "orders": 2581.2282,
+      "net_revenue": 190826.7423,
+      "net_profit": 18833.2674,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 20.0,
+      "orders": 2626.7902,
+      "net_revenue": 191656.2718,
+      "net_profit": 18090.4192,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 21.0,
+      "orders": 2673.1564,
+      "net_revenue": 192455.5251,
+      "net_profit": 17300.7701,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 22.0,
+      "orders": 2720.3411,
+      "net_revenue": 193223.1749,
+      "net_profit": 16462.8991,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 23.0,
+      "orders": 2768.3586,
+      "net_revenue": 193957.8565,
+      "net_profit": 15575.3501,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 24.0,
+      "orders": 2817.2237,
+      "net_revenue": 194658.1669,
+      "net_profit": 14636.6303,
+      "extrapolation": true
+    },
+    {
+      "discount_rate_pct": 25.0,
+      "orders": 2866.9514,
+      "net_revenue": 195322.6638,
+      "net_profit": 13645.2097,
+      "extrapolation": true
+    }
+  ]
+}
